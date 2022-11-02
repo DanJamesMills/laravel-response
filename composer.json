@@ -1,0 +1,54 @@
+{
+    "name": "danjamesmills/laravel-response",
+    "description": "",
+    "keywords": [
+        "danjamesmills",
+        "laravel-response"
+    ],
+    "homepage": "https://github.com/danjamesmills/laravel-response",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Daniel Mills",
+            "email": "daniel620@hotmail.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DanJamesMills\\LaravelResponse\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DanJamesMills\\LaravelResponse\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DanJamesMills\\LaravelResponse\\LaravelResponseServiceProvider"
+            ],
+            "aliases": {
+                "LaravelResponse": "DanJamesMills\\LaravelResponse\\LaravelResponseFacade"
+            }
+        }
+    }
+}
