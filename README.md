@@ -1,10 +1,10 @@
-# Very short description of the package
+# Laravel Response
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/danjamesmills/laravel-response.svg?style=flat-square)](https://packagist.org/packages/danjamesmills/laravel-response)
 [![Total Downloads](https://img.shields.io/packagist/dt/danjamesmills/laravel-response.svg?style=flat-square)](https://packagist.org/packages/danjamesmills/laravel-response)
 ![GitHub Actions](https://github.com/danjamesmills/laravel-response/actions/workflows/main.yml/badge.svg)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Introducing the Simple API Response Package for Laravel - a lightweight package that allows you to easily extend the functionality of your API's BaseController. This package provides simple helper methods for returning response codes and data. The methods include "sendResponse", "sendError" and "sendSuccess" which helps to return JSON responses with appropriate status codes and messages. With this package, you can streamline your API's response handling and ensure consistency throughout your application. This package is easy to use, and it can help you to keep your code clean and well-organized. The package is built with flexibility in mind, and it can easily adapt to your application's specific needs.
 
 ## Installation
 
@@ -17,7 +17,24 @@ composer require danjamesmills/laravel-response
 ## Usage
 
 ```php
-// Usage description here
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use DanJamesMills\LaravelResponse\Http\Controllers\BaseController;
+
+class PostAPIController extends AppBaseController
+{
+    public function store(PollAPIRequest $request)
+    {
+        return $this->sendResponse($poll->toArray(), 'Poll saved successfully');
+    }
+    
+    public function destroy($id)
+    {
+        return $this->sendSuccess('Poll deleted successfully');
+    }
+}
 ```
 
 ### Testing
@@ -46,7 +63,3 @@ If you discover any security related issues, please email daniel620@hotmail.co.u
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
