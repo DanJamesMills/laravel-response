@@ -3,7 +3,7 @@
 namespace DanJamesMills\LaravelResponse\Http\Controllers;
 
 use DanJamesMills\LaravelResponse\Utils\ResponseUtil;
-use Response;
+use Illuminate\Support\Facades\Response;
 
 class BaseController
 {
