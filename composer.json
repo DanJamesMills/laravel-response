@@ -1,6 +1,6 @@
 {
   "name": "danjamesmills/laravel-response",
-  "description": "",
+  "description": "A Laravel package to standardise and simplify API responses, providing consistent structure and helper utilities for success, error, and data responses.",
   "keywords": [
     "danjamesmills",
     "laravel-response"
@@ -17,10 +17,10 @@
   ],
   "require": {
     "php": "^8.0|^8.1|^8.2|^8.3|^8.4",
-    "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0"
+    "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0"
   },
   "require-dev": {
-    "orchestra/testbench": "^8.0|^9.0|^10.0",
+    "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
     "phpunit/phpunit": "^10.5|^11.0"
   },
   "autoload": {
